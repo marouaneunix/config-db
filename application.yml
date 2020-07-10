@@ -1,0 +1,7 @@
+eureka:
+  client:
+    register-with-eureka: true
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://${eureka.host:localhost}:${eureka.port:8070}/eureka/
