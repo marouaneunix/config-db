@@ -1,0 +1,9 @@
+client:
+  collaborator:
+    name: api-collaborator
+  project:
+    name: api-project
+
+feign:
+  hystrix:
+    enabled: true
