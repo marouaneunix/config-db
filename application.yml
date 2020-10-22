@@ -1,7 +1,9 @@
 eureka:
   client:
-    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://${registry.host:localhost}:${registry.port:8761}/eureka
     healthcheck:
       enabled: true
-    serviceUrl:
-      defaultZone: http://${eureka.host:localhost}:${eureka.port:8070}/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
